@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem Farma - Seu app de saúde</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container-header">
+            <h1>Bem Farma</h1>
+            <nav>
+                <a href="#sobre">Sobre</a>
+                <a href="#funcionalidades">Funcionalidades</a>
+                <a href="#download">Download</a>
+                <a href="#contato">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Banner inicial -->
+        <section class="banner">
+            <div class="banner-text">
+                <h2>Seu app de saúde, afiliado ao SUS</h2>
+                <p>Armazene seus medicamentos, agende consultas e exames, tudo em um único lugar.</p>
+                <button onclick="scrollToSection('download')">Baixe agora</button>
+            </div>
+        </section>
+
+     <!-- Sobre -->
+<section id="sobre" class="sobre">
+    <div class="container">
+        <div class="sobre-box">
+            <h2>Sobre o App Bem Farma</h2>
+            <p>O Bem Farma é o aplicativo da família para cuidar da saúde de todos. Com ele, você pode armazenar seus medicamentos, solicitar reposições e agendar consultas e exames de forma rápida e prática, tudo conectado ao SUS. Seguro, fácil de usar e pensado para todos, o Bem Farma ajuda você a organizar os cuidados com a saúde da sua família, garantindo mais tranquilidade e bem-estar no dia a dia.</p>
+        </div>
+    </div>
+</section>
+
+
+        <!-- Funcionalidades -->
+        <section id="funcionalidades" class="funcionalidades">
+            <div class="container">
+                <h2>Funcionalidades</h2>
+                <div class="cards">
+                    <div class="card">
+                        <h3>Medicamentos</h3>
+                        <p>Armazene e solicite seus medicamentos do SUS direto pelo app.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Consultas & Exames</h3>
+                        <p>Agende consultas e exames sem precisar ir até a farmácia.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Alertas</h3>
+                        <p>Receba notificações de horários de medicação e exames.</p>
+                    </div>
+                    <div class="card">
+                        <h3>Acessibilidade</h3>
+                        <p>Interface adaptada para pessoas com deficiência visual e auditiva.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Carrossel do App -->
+        <section class="carrossel-section">
+            <div class="container">
+                <h2>Siga a gente nas redes Sociais</h2>
+<a href="https://www.instagram.com/bem._.farma?utm_source=qr&igsh=dGowMHBmMGtpNnI3" target="_blank">Siga-nos no Instagram</a>
+                <div class="carrossel">
+                    <img src="app1.png" class="carrossel-img" alt="Tela do app 1">
+                    <img src="app2.png" class="carrossel-img" alt="Tela do app 2">
+                    <img src="app3.png" class="carrossel-img" alt="Tela do app 3">
+                </div>
+                <div class="carrossel-controls">
+                    <button onclick="mudarSlide(-1)">&#10094;</button>
+                    <button onclick="mudarSlide(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download -->
+        <section id="download" class="download">
+            <div class="container">
+                <h2>Baixe o App</h2>
+                <p>Disponível para Android e iOS</p>
+                <button onclick="baixarApp('android')">Android</button>
+                <button onclick="baixarApp('ios')">iOS</button>
+            </div>
+        </section>
+
+        <!-- Contato -->
+        <section id="contato" class="contato">
+            <div class="container">
+                <h2>Entre em Contato</h2>
+                <form>
+                    <label for="nome">Nome</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="mensagem">Mensagem</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Bem Farma - Todos os direitos reservados</p>
+        <button onclick="ativarAltoContraste()">Modo Alto Contraste</button>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
