@@ -11,7 +11,7 @@
 <body>
     <header>
         <div class="container-header">
-            <h1>Bem Farma</h1>
+            <h1>+Bem Farma</h1>
             <nav>
                 <a href="#sobre">Sobre</a>
                 <a href="#funcionalidades">Funcionalidades</a>
@@ -22,7 +22,7 @@
     </header>
 
     <main>
-        <!-- Banner inicial -->
+      
         <section class="banner">
             <div class="banner-text">
                 <h2>Seu app de saúde, afiliado ao SUS</h2>
@@ -42,7 +42,7 @@
 </section>
 
 
-        <!-- Funcionalidades -->
+
         <section id="funcionalidades" class="funcionalidades">
             <div class="container">
                 <h2>Funcionalidades</h2>
@@ -67,7 +67,7 @@
             </div>
         </section>
 
-        <!-- Carrossel do App -->
+ 
         <section class="carrossel-section">
             <div class="container">
                 <h2>Siga a gente nas redes Sociais</h2>
@@ -84,7 +84,7 @@
             </div>
         </section>
 
-        <!-- Download -->
+   
         <section id="download" class="download">
             <div class="container">
                 <h2>Baixe o App</h2>
@@ -94,7 +94,7 @@
             </div>
         </section>
 
-        <!-- Contato -->
+
         <section id="contato" class="contato">
             <div class="container">
                 <h2>Entre em Contato</h2>
@@ -120,5 +120,26 @@
     </footer>
 
     <script src="script.js"></script>
+<script>
+document.querySelector("form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const nome = document.getElementById("nome").value;
+    const email = document.getElementById("email").value;
+    const mensagem = document.getElementById("mensagem").value;
+
+    const resposta = await fetch("http://127.0.0.1:5000/contato", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nome, email, mensagem })
+    });
+
+    const dados = await resposta.json();
+    alert(dados.mensagem);
+
+    e.target.reset();
+});
+</script>
+
 </body>
 </html>
